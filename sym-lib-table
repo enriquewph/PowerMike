@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name components)(type Legacy)(uri ${KIPRJMOD}/lib/components.lib)(options "")(descr ""))
+  (lib (name ESP8266)(type Legacy)(uri ${KIPRJMOD}/lib/esp8266/ESP8266.lib)(options "")(descr ""))
 )

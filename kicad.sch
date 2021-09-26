@@ -78,8 +78,6 @@ Wire Wire Line
 	4400 6900 4400 6950
 Wire Wire Line
 	4400 6950 4900 6950
-Wire Notes Line
-	5250 6250 3600 6250
 Text Notes 3650 6350 0    50   Italic 0
 I2C HEADER
 Wire Wire Line
@@ -106,8 +104,6 @@ F2 "VIN" I L 2200 6650 39
 F3 "VOUT" O R 3000 6650 39 
 F4 "VOUT_5V" O R 3000 6800 39 
 $EndSheet
-Wire Notes Line
-	3600 7700 5250 7700
 Wire Notes Line
 	2100 4250 2100 6200
 Wire Notes Line
@@ -193,8 +189,6 @@ Text Notes 600  6350 0    50   Italic 0
 POWER SUPPLY
 Wire Notes Line
 	3600 7700 3600 6250
-Wire Notes Line
-	5250 6250 5250 7700
 $Sheet
 S 2200 7150 550  200 
 U 60E45CE9
@@ -494,13 +488,9 @@ Wire Notes Line
 Wire Notes Line
 	550  4250 2100 4250
 Wire Notes Line
-	5500 5300 5500 6200
-Wire Notes Line
 	3750 5300 5500 5300
 Wire Notes Line
 	3750 6200 3750 5300
-Wire Notes Line
-	5500 6200 3750 6200
 Wire Wire Line
 	4050 5600 4200 5600
 Text GLabel 4050 5600 0    39   Output ~ 0
@@ -900,58 +890,6 @@ F 3 "" H 1950 6550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L components:DS1233 U11
-U 1 1 60E05680
-P 6000 7000
-F 0 "U11" H 5870 7046 50  0000 R CNN
-F 1 "DS1233A-10" H 5870 6955 50  0000 R CNN
-F 2 "Package_TO_SOT_THT:TO-92" H 6000 7000 50  0001 C CNN
-F 3 "https://datasheets.maximintegrated.com/en/ds/DS1233A.pdf" H 6000 7000 50  0001 C CNN
-F 4 "DS1233A-10" H 6000 7000 50  0001 C CNN "manf#"
-	1    6000 7000
-	1    0    0    -1  
-$EndComp
-Text GLabel 6500 7000 2    39   Input ~ 0
-RESET
-Wire Wire Line
-	6500 7000 6400 7000
-$Comp
-L power:+3V3 #PWR06
-U 1 1 60E0AA80
-P 6000 6650
-F 0 "#PWR06" H 6000 6500 50  0001 C CNN
-F 1 "+3V3" H 6015 6823 50  0000 C CNN
-F 2 "" H 6000 6650 50  0001 C CNN
-F 3 "" H 6000 6650 50  0001 C CNN
-	1    6000 6650
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	6000 6650 6000 6700
-$Comp
-L power:GND #PWR09
-U 1 1 60E0F89B
-P 6000 7350
-F 0 "#PWR09" H 6000 7100 50  0001 C CNN
-F 1 "GND" H 6005 7177 50  0000 C CNN
-F 2 "" H 6000 7350 50  0001 C CNN
-F 3 "" H 6000 7350 50  0001 C CNN
-	1    6000 7350
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	6000 7350 6000 7300
-Text Notes 5350 6350 0    50   Italic 0
-POWER MONITOR
-Wire Notes Line
-	5300 7700 5300 6250
-Wire Notes Line
-	6800 6250 6800 7700
-Wire Notes Line
-	5300 7700 6800 7700
-Wire Notes Line
-	5300 6250 6800 6250
-$Comp
 L power:+BATT #PWR04
 U 1 1 60E3DAA2
 P 1050 6550
@@ -1164,4 +1102,66 @@ Text Notes 6850 2500 0    50   ~ 0
 ups_carga
 Text Notes 6850 2600 0    50   ~ 0
 ups_inverter
+Wire Notes Line
+	5500 6200 3750 6200
+Wire Notes Line
+	5500 5300 5500 6200
+Wire Notes Line
+	5250 6250 5250 7700
+Wire Notes Line
+	3600 7700 5250 7700
+Wire Notes Line
+	5250 6250 3600 6250
+$Comp
+L components:DS1233 U11
+U 1 1 60E05680
+P 6000 7000
+F 0 "U11" H 5870 7046 50  0000 R CNN
+F 1 "DS1233A-10" H 5870 6955 50  0000 R CNN
+F 2 "Package_TO_SOT_THT:TO-92" H 6000 7000 50  0001 C CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/DS1233A.pdf" H 6000 7000 50  0001 C CNN
+F 4 "DS1233A-10" H 6000 7000 50  0001 C CNN "manf#"
+	1    6000 7000
+	1    0    0    -1  
+$EndComp
+Text GLabel 6500 7000 2    39   Input ~ 0
+RESET
+Wire Wire Line
+	6500 7000 6400 7000
+$Comp
+L power:+3V3 #PWR06
+U 1 1 60E0AA80
+P 6000 6650
+F 0 "#PWR06" H 6000 6500 50  0001 C CNN
+F 1 "+3V3" H 6015 6823 50  0000 C CNN
+F 2 "" H 6000 6650 50  0001 C CNN
+F 3 "" H 6000 6650 50  0001 C CNN
+	1    6000 6650
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 6650 6000 6700
+$Comp
+L power:GND #PWR09
+U 1 1 60E0F89B
+P 6000 7350
+F 0 "#PWR09" H 6000 7100 50  0001 C CNN
+F 1 "GND" H 6005 7177 50  0000 C CNN
+F 2 "" H 6000 7350 50  0001 C CNN
+F 3 "" H 6000 7350 50  0001 C CNN
+	1    6000 7350
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 7350 6000 7300
+Text Notes 5350 6350 0    50   Italic 0
+POWER MONITOR
+Wire Notes Line
+	5300 7700 5300 6250
+Wire Notes Line
+	6800 6250 6800 7700
+Wire Notes Line
+	5300 7700 6800 7700
+Wire Notes Line
+	5300 6250 6800 6250
 $EndSCHEMATC
