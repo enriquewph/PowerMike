@@ -3,12 +3,12 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 7 21
-Title "USB - UART Serial Converter"
-Date "2021-06-10"
+Sheet 9 9
+Title "PowerMike"
+Date "2021-09-26"
 Rev "0.1"
 Comp ""
-Comment1 "https://github.com/enriquewph/esp32-ups-monitor"
+Comment1 "https://github.com/enriquewph/PowerMike"
 Comment2 ""
 Comment3 ""
 Comment4 ""

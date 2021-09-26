@@ -3,38 +3,16 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 21
-Title "ESP32 Uninterrupted Power Supply Monitor"
-Date "2021-06-10"
+Sheet 1 9
+Title "PowerMike"
+Date "2021-09-26"
 Rev "0.1"
 Comp ""
-Comment1 "https://github.com/enriquewph/esp32-ups-monitor"
+Comment1 "https://github.com/enriquewph/PowerMike"
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L power:GND #PWR030
-U 1 1 60B6EFE9
-P 9850 6900
-F 0 "#PWR030" H 9850 6650 50  0001 C CNN
-F 1 "GND" H 9855 6727 50  0000 C CNN
-F 2 "" H 9850 6900 50  0001 C CNN
-F 3 "" H 9850 6900 50  0001 C CNN
-	1    9850 6900
-	-1   0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR029
-U 1 1 60B6F944
-P 9850 4100
-F 0 "#PWR029" H 9850 3950 50  0001 C CNN
-F 1 "+3V3" H 9865 4273 50  0000 C CNN
-F 2 "" H 9850 4100 50  0001 C CNN
-F 3 "" H 9850 4100 50  0001 C CNN
-	1    9850 4100
-	-1   0    0    -1  
-$EndComp
 Text Notes 600  4350 0    50   Italic 0
 RELAY OUTPUTS
 $Comp
@@ -86,15 +64,6 @@ Wire Wire Line
 	4100 6900 4100 7050
 Wire Wire Line
 	4100 7050 4900 7050
-NoConn ~ 9250 5100
-NoConn ~ 9250 4900
-NoConn ~ 9250 5600
-NoConn ~ 9250 5500
-NoConn ~ 9250 5400
-NoConn ~ 9250 5200
-NoConn ~ 9250 5300
-NoConn ~ 9250 4800
-NoConn ~ 9250 4500
 $Sheet
 S 2200 6550 800  350 
 U 60CF66AD
@@ -208,12 +177,6 @@ Wire Wire Line
 Connection ~ 1700 7050
 Wire Wire Line
 	1700 7050 1700 7100
-NoConn ~ 10450 5500
-NoConn ~ 10450 5600
-NoConn ~ 10450 5700
-NoConn ~ 10450 5800
-NoConn ~ 10450 5900
-NoConn ~ 10450 6000
 $Comp
 L Diode:B140-E3 D2
 U 1 1 60CF302C
@@ -289,68 +252,42 @@ Wire Wire Line
 Wire Wire Line
 	4850 7250 4900 7250
 $Comp
-L RF_Module:ESP32-WROOM-32 U6
-U 1 1 60EA8F40
-P 9850 5500
-F 0 "U6" H 10300 6850 50  0000 C CNN
-F 1 "ESP32" H 9500 6850 50  0000 C CNN
-F 2 "esp32-wroom-roover:ESP32-WROOM-WROVER-NC" H 9850 4000 50  0001 C CNN
-F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf" H 9550 5550 50  0001 C CNN
-F 4 "ESP32-WROOM-32E" H 9850 5500 50  0001 C CNN "manf#"
-	1    9850 5500
-	-1   0    0    -1  
-$EndComp
-$Comp
 L Device:C C1
 U 1 1 60CA50A5
-P 10700 5150
-F 0 "C1" H 10815 5196 50  0000 L CNN
-F 1 "100nF" H 10815 5105 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 10738 5000 50  0001 C CNN
-F 3 "https://www.yageo.com/upload/media/product/productsearch/datasheet/mlcc/UPY-GPHC_X7R_6.3V-to-50V_18.pdf" H 10700 5150 50  0001 C CNN
-F 4 "50V" H 10700 5150 50  0001 C CNN "Voltage"
-F 5 "CC1206KRX7R9BB104" H 10700 5150 50  0001 C CNN "manf#"
-	1    10700 5150
+P 10650 5800
+F 0 "C1" H 10765 5846 50  0000 L CNN
+F 1 "100nF" H 10765 5755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 10688 5650 50  0001 C CNN
+F 3 "https://www.yageo.com/upload/media/product/productsearch/datasheet/mlcc/UPY-GPHC_X7R_6.3V-to-50V_18.pdf" H 10650 5800 50  0001 C CNN
+F 4 "50V" H 10650 5800 50  0001 C CNN "Voltage"
+F 5 "CC1206KRX7R9BB104" H 10650 5800 50  0001 C CNN "manf#"
+	1    10650 5800
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0103
 U 1 1 60CDA118
-P 10700 5300
-F 0 "#PWR0103" H 10700 5050 50  0001 C CNN
-F 1 "GND" H 10705 5127 50  0000 C CNN
-F 2 "" H 10700 5300 50  0001 C CNN
-F 3 "" H 10700 5300 50  0001 C CNN
-	1    10700 5300
+P 10650 5950
+F 0 "#PWR0103" H 10650 5700 50  0001 C CNN
+F 1 "GND" H 10655 5777 50  0000 C CNN
+F 2 "" H 10650 5950 50  0001 C CNN
+F 3 "" H 10650 5950 50  0001 C CNN
+	1    10650 5950
 	-1   0    0    -1  
 $EndComp
 $Comp
 L power:+3V3 #PWR0104
 U 1 1 60D96616
-P 10700 5000
-F 0 "#PWR0104" H 10700 4850 50  0001 C CNN
-F 1 "+3V3" H 10715 5173 50  0000 C CNN
-F 2 "" H 10700 5000 50  0001 C CNN
-F 3 "" H 10700 5000 50  0001 C CNN
-	1    10700 5000
+P 10650 5650
+F 0 "#PWR0104" H 10650 5500 50  0001 C CNN
+F 1 "+3V3" H 10665 5823 50  0000 C CNN
+F 2 "" H 10650 5650 50  0001 C CNN
+F 3 "" H 10650 5650 50  0001 C CNN
+	1    10650 5650
 	-1   0    0    -1  
 $EndComp
-Text GLabel 10600 4300 2    39   Input ~ 0
+Text GLabel 7850 5800 0    39   Input ~ 0
 RESET
-Wire Wire Line
-	10600 4300 10450 4300
-Text GLabel 9100 4300 0    39   Input ~ 0
-GPIO0
-Wire Wire Line
-	9100 4300 9250 4300
-Text GLabel 9100 4400 0    39   Input ~ 0
-TXD0
-Wire Wire Line
-	9100 4400 9250 4400
-Text GLabel 9100 4600 0    39   Output ~ 0
-RXD0
-Wire Wire Line
-	9100 4600 9250 4600
 Text GLabel 3200 7250 2    39   Output ~ 0
 VBAT
 Wire Wire Line
@@ -511,17 +448,6 @@ Text GLabel 5200 5800 2    39   Output ~ 0
 RESET
 Text GLabel 5200 5700 2    39   Input ~ 0
 TXD0
-$Sheet
-S 4200 5500 850  500 
-U 60DD98A5
-F0 "USB -> Serial" 50
-F1 "serialport.sch" 50
-F2 "TXD" O R 5050 5600 39 
-F3 "RXD" I R 5050 5700 39 
-F4 "RESET_uC" O R 5050 5800 39 
-F5 "FLASH_uC" O R 5050 5900 39 
-F6 "VUSB" O L 4200 5600 39 
-$EndSheet
 $Comp
 L power:GND #PWR0105
 U 1 1 60D3B2F3
@@ -648,90 +574,19 @@ Connection ~ 4100 7050
 Wire Wire Line
 	3900 6950 4400 6950
 Connection ~ 4400 6950
-Text GLabel 9100 5800 0    39   BiDi ~ 0
+Text GLabel 9950 6000 2    39   BiDi ~ 0
 SCL
-Text GLabel 9100 5700 0    39   BiDi ~ 0
+Text GLabel 9950 6100 2    39   BiDi ~ 0
 SDA
-Wire Wire Line
-	9100 5700 9250 5700
-Wire Wire Line
-	9100 5800 9250 5800
-Text GLabel 10600 4500 2    39   Input ~ 0
-VBAT
-Text GLabel 10600 4600 2    39   Input ~ 0
-TBAT
-Wire Wire Line
-	10600 4500 10450 4500
-Wire Wire Line
-	10450 4600 10600 4600
-$Sheet
-S 2800 3150 700  550 
-U 6121A9EA
-F0 "Current Sensor" 39
-F1 "currentsensor.sch" 39
-F2 "IP+" B L 2800 3300 39 
-F3 "IP-" B L 2800 3550 39 
-F4 "OUT" O R 3500 3300 39 
-$EndSheet
-$Comp
-L Mechanical:MountingHole_Pad H1
-U 1 1 6121C08C
-P 2600 3300
-F 0 "H1" V 2700 3300 50  0000 C CNN
-F 1 "MountingHole_Pad" H 2700 3258 50  0001 L CNN
-F 2 "MountingHole:MountingHole_4mm_Pad_Via" H 2600 3300 50  0001 C CNN
-F 3 "~" H 2600 3300 50  0001 C CNN
-	1    2600 3300
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Mechanical:MountingHole_Pad H2
-U 1 1 6121C6AF
-P 2600 3550
-F 0 "H2" V 2700 3550 50  0000 C CNN
-F 1 "MountingHole_Pad" H 2700 3508 50  0001 L CNN
-F 2 "MountingHole:MountingHole_4mm_Pad_Via" H 2600 3550 50  0001 C CNN
-F 3 "~" H 2600 3550 50  0001 C CNN
-	1    2600 3550
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	2700 3550 2800 3550
-Wire Wire Line
-	2700 3300 2800 3300
-Text GLabel 4250 3300 2    39   Output ~ 0
-IBAT
-$Sheet
-S 3600 3200 550  200 
-U 61276139
-F0 "Input Prot" 39
-F1 "inprot.sch" 39
-F2 "IN" I L 3600 3300 39 
-F3 "OUT" O R 4150 3300 39 
-$EndSheet
-Wire Wire Line
-	4150 3300 4250 3300
-Wire Wire Line
-	3600 3300 3500 3300
-Wire Notes Line
-	2400 3850 2400 2950
-Wire Notes Line
-	2400 2950 4550 2950
-Wire Notes Line
-	4550 2950 4550 3850
-Wire Notes Line
-	4550 3850 2400 3850
-Text Notes 2450 3050 0    50   Italic 0
-CURRENT SENSOR
 $Sheet
 S 650  3200 500  300 
 U 612F4D6E
-F0 "LM35: T1" 39
+F0 "LM35" 39
 F1 "lm35.sch" 39
 F2 "OUT" O R 1150 3300 39 
 $EndSheet
 Text GLabel 2000 3300 2    39   Output ~ 0
-TBAT
+TEMP
 $Sheet
 S 1350 3200 550  200 
 U 612F6239
@@ -742,101 +597,14 @@ F3 "OUT" O R 1900 3300 39
 $EndSheet
 Wire Wire Line
 	1900 3300 2000 3300
-$Sheet
-S 650  3750 500  300 
-U 61323238
-F0 "LM35: T2" 39
-F1 "lm35.sch" 39
-F2 "OUT" O R 1150 3850 39 
-$EndSheet
-Text GLabel 2000 3850 2    39   Output ~ 0
-TEMP2
-$Sheet
-S 1350 3750 550  200 
-U 6132323D
-F0 "Prot T2" 39
-F1 "inprot.sch" 39
-F2 "IN" I L 1350 3850 39 
-F3 "OUT" O R 1900 3850 39 
-$EndSheet
-Wire Wire Line
-	1900 3850 2000 3850
 Wire Wire Line
 	1150 3300 1350 3300
-Wire Wire Line
-	1150 3850 1350 3850
 Wire Notes Line
-	2350 4200 550  4200
+	2350 3650 550  3650
 Wire Notes Line
 	550  2950 2350 2950
-Wire Notes Line
-	550  2950 550  4200
-Wire Notes Line
-	2350 2950 2350 4200
 Text Notes 600  3050 0    50   Italic 0
-TEMPERATURE SENSORS
-$Sheet
-S 2850 4200 650  300 
-U 6137CC2E
-F0 "Salida MOSFET" 39
-F1 "mosfet-out.sch" 39
-F2 "ON" I L 2850 4450 39 
-F3 "OUT" O R 3500 4450 39 
-$EndSheet
-Text GLabel 2800 4450 0    39   Input ~ 0
-FAN_1
-Wire Wire Line
-	2800 4450 2850 4450
-Wire Notes Line
-	2400 4650 4200 4650
-Wire Notes Line
-	4200 4650 4200 3900
-Wire Notes Line
-	4200 3900 2400 3900
-Wire Notes Line
-	2400 3900 2400 4650
-Text Notes 2450 4000 0    50   Italic 0
-POWER OUTPUT
-Text GLabel 9100 6400 0    39   Input ~ 0
-UPS_NORMAL
-Text GLabel 9100 6000 0    39   Input ~ 0
-UPS_CARGA
-Text GLabel 9100 6100 0    39   Input ~ 0
-UPS_INVERTER
-Text GLabel 9100 6300 0    39   Output ~ 0
-UPS_ON
-Text GLabel 9100 6500 0    39   Input ~ 0
-IBAT
-Text GLabel 9100 6600 0    39   Input ~ 0
-TEMP2
-Text GLabel 9100 6200 0    39   Output ~ 0
-RELAY_2
-Text GLabel 9100 5000 0    39   Output ~ 0
-RELAY_1
-Text GLabel 9100 4700 0    39   Output ~ 0
-FAN_1
-Wire Wire Line
-	9100 6000 9250 6000
-Wire Wire Line
-	9250 6100 9100 6100
-Wire Wire Line
-	9100 6200 9250 6200
-Wire Wire Line
-	9250 6300 9100 6300
-Wire Wire Line
-	9100 6400 9250 6400
-Wire Wire Line
-	9100 6500 9250 6500
-Wire Wire Line
-	9100 6600 9250 6600
-Wire Wire Line
-	9100 4700 9250 4700
-Wire Wire Line
-	9250 5000 9100 5000
-Text GLabel 9100 5900 0    39   Output ~ 0
-RELAY_3
-Wire Wire Line
-	9100 5900 9250 5900
+TEMPERATURE SENSOR
 Wire Wire Line
 	3100 6650 3000 6650
 Wire Wire Line
@@ -902,40 +670,6 @@ F 3 "" H 1050 6550 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1050 6550 1050 6650
-$Comp
-L Connector_Generic:Conn_01x03 J9
-U 1 1 60E4F195
-P 3950 4350
-AR Path="/60E4F195" Ref="J9"  Part="1" 
-AR Path="/6137CC2E/60E4F195" Ref="J?"  Part="1" 
-F 0 "J9" H 3800 4550 50  0000 L CNN
-F 1 "Conn_01x03" H 4030 4301 50  0001 L CNN
-F 2 "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical" H 3950 4350 50  0001 C CNN
-F 3 "https://app.adam-tech.com/products/download/data_sheet/196588/lha-xx-ts-data-sheet.pdf" H 3950 4350 50  0001 C CNN
-F 4 "LHA-03-TS" H 3950 4350 50  0001 C CNN "manf#"
-	1    3950 4350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3600 4200 3600 4250
-Wire Wire Line
-	3600 4250 3750 4250
-Wire Wire Line
-	3500 4450 3750 4450
-NoConn ~ 3750 4350
-$Comp
-L power:+12V #PWR05
-U 1 1 60E6303A
-P 3600 4200
-AR Path="/60E6303A" Ref="#PWR05"  Part="1" 
-AR Path="/60CF66AD/60E6303A" Ref="#PWR?"  Part="1" 
-F 0 "#PWR05" H 3600 4050 50  0001 C CNN
-F 1 "+12V" H 3615 4373 50  0000 C CNN
-F 2 "" H 3600 4200 50  0001 C CNN
-F 3 "" H 3600 4200 50  0001 C CNN
-	1    3600 4200
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1450 6650 1550 6650
 Wire Wire Line
@@ -950,158 +684,38 @@ Wire Wire Line
 $Comp
 L Device:C C22
 U 1 1 60D9F4EC
-P 10700 5950
-F 0 "C22" H 10815 5996 50  0000 L CNN
-F 1 "1uF" H 10815 5905 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 10738 5800 50  0001 C CNN
-F 3 "https://www.samsungsem.com/resources/file/global/support/product_catalog/MLCC.pdf" H 10700 5950 50  0001 C CNN
-F 4 "50V" H 10700 5950 50  0001 C CNN "Voltage"
-F 5 "CL31F105ZBFNNNE" H 10700 5950 50  0001 C CNN "manf#"
-	1    10700 5950
+P 10650 6600
+F 0 "C22" H 10765 6646 50  0000 L CNN
+F 1 "1uF" H 10765 6555 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 10688 6450 50  0001 C CNN
+F 3 "https://www.samsungsem.com/resources/file/global/support/product_catalog/MLCC.pdf" H 10650 6600 50  0001 C CNN
+F 4 "50V" H 10650 6600 50  0001 C CNN "Voltage"
+F 5 "CL31F105ZBFNNNE" H 10650 6600 50  0001 C CNN "manf#"
+	1    10650 6600
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0154
 U 1 1 60D9F504
-P 10700 6100
-F 0 "#PWR0154" H 10700 5850 50  0001 C CNN
-F 1 "GND" H 10705 5927 50  0000 C CNN
-F 2 "" H 10700 6100 50  0001 C CNN
-F 3 "" H 10700 6100 50  0001 C CNN
-	1    10700 6100
+P 10650 6750
+F 0 "#PWR0154" H 10650 6500 50  0001 C CNN
+F 1 "GND" H 10655 6577 50  0000 C CNN
+F 2 "" H 10650 6750 50  0001 C CNN
+F 3 "" H 10650 6750 50  0001 C CNN
+	1    10650 6750
 	-1   0    0    -1  
 $EndComp
 $Comp
 L power:+3V3 #PWR0155
 U 1 1 60D9F50E
-P 10700 5800
-F 0 "#PWR0155" H 10700 5650 50  0001 C CNN
-F 1 "+3V3" H 10715 5973 50  0000 C CNN
-F 2 "" H 10700 5800 50  0001 C CNN
-F 3 "" H 10700 5800 50  0001 C CNN
-	1    10700 5800
+P 10650 6450
+F 0 "#PWR0155" H 10650 6300 50  0001 C CNN
+F 1 "+3V3" H 10665 6623 50  0000 C CNN
+F 2 "" H 10650 6450 50  0001 C CNN
+F 3 "" H 10650 6450 50  0001 C CNN
+	1    10650 6450
 	-1   0    0    -1  
 $EndComp
-$Comp
-L Interface_Expansion:PCF8574 U12
-U 1 1 60DA62E6
-P 10250 2850
-F 0 "U12" H 10600 3500 50  0000 C CNN
-F 1 "PCF8574" H 10000 3500 50  0000 C CNN
-F 2 "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm" H 10250 2850 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/pcf8574a.pdf" H 10250 2850 50  0001 C CNN
-	1    10250 2850
-	-1   0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0156
-U 1 1 60DA77D4
-P 10250 3550
-F 0 "#PWR0156" H 10250 3300 50  0001 C CNN
-F 1 "GND" H 10255 3377 50  0000 C CNN
-F 2 "" H 10250 3550 50  0001 C CNN
-F 3 "" H 10250 3550 50  0001 C CNN
-	1    10250 3550
-	-1   0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR0157
-U 1 1 60DA7E00
-P 10250 2150
-F 0 "#PWR0157" H 10250 2000 50  0001 C CNN
-F 1 "+3V3" H 10265 2323 50  0000 C CNN
-F 2 "" H 10250 2150 50  0001 C CNN
-F 3 "" H 10250 2150 50  0001 C CNN
-	1    10250 2150
-	-1   0    0    -1  
-$EndComp
-Text GLabel 10950 2450 2    39   BiDi ~ 0
-SCL
-Text GLabel 10950 2550 2    39   BiDi ~ 0
-SDA
-$Comp
-L power:GND #PWR011
-U 1 1 60DB6AE4
-P 10800 3350
-F 0 "#PWR011" H 10800 3100 50  0001 C CNN
-F 1 "GND" H 10805 3177 50  0000 C CNN
-F 2 "" H 10800 3350 50  0001 C CNN
-F 3 "" H 10800 3350 50  0001 C CNN
-	1    10800 3350
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	10750 2550 10950 2550
-Wire Wire Line
-	10750 2450 10950 2450
-$Comp
-L power:+3V3 #PWR012
-U 1 1 60DC3058
-P 10900 2350
-F 0 "#PWR012" H 10900 2200 50  0001 C CNN
-F 1 "+3V3" H 10915 2523 50  0000 C CNN
-F 2 "" H 10900 2350 50  0001 C CNN
-F 3 "" H 10900 2350 50  0001 C CNN
-	1    10900 2350
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	10900 2350 10900 2950
-Wire Wire Line
-	10900 2950 10750 2950
-Wire Wire Line
-	10800 3350 10800 2850
-Wire Wire Line
-	10800 2750 10750 2750
-Wire Wire Line
-	10750 2850 10800 2850
-Connection ~ 10800 2850
-Wire Wire Line
-	10800 2850 10800 2750
-$Sheet
-S 5800 2300 800  500 
-U 6174A55C
-F0 "Opto I/O" 50
-F1 "io.sch" 50
-F2 "!OUT0" I L 5800 2400 39 
-F3 "OUT1" I L 5800 2500 39 
-F4 "IN0" O R 6600 2400 39 
-F5 "IN1" O R 6600 2500 39 
-F6 "IN2" O R 6600 2600 39 
-F7 "IN3" O R 6600 2700 39 
-$EndSheet
-Text GLabel 5700 2400 0    39   Input ~ 0
-OUT0
-Wire Wire Line
-	5700 2400 5800 2400
-Text GLabel 5700 2500 0    39   Input ~ 0
-OUT1
-Wire Wire Line
-	5700 2500 5800 2500
-Text GLabel 6700 2400 2    39   Output ~ 0
-IN0
-Text GLabel 6700 2500 2    39   Output ~ 0
-IN1
-Text GLabel 6700 2600 2    39   Output ~ 0
-IN2
-Text GLabel 6700 2700 2    39   Output ~ 0
-IN3
-Wire Wire Line
-	6600 2400 6700 2400
-Wire Wire Line
-	6600 2500 6700 2500
-Wire Wire Line
-	6600 2600 6700 2600
-Wire Wire Line
-	6600 2700 6700 2700
-Text Notes 5750 2350 2    50   ~ 0
-ups_on
-Text Notes 6850 2400 0    50   ~ 0
-ups_normal
-Text Notes 6850 2500 0    50   ~ 0
-ups_carga
-Text Notes 6850 2600 0    50   ~ 0
-ups_inverter
 Wire Notes Line
 	5500 6200 3750 6200
 Wire Notes Line
@@ -1164,4 +778,171 @@ Wire Notes Line
 	5300 7700 6800 7700
 Wire Notes Line
 	5300 6250 6800 6250
+Text GLabel 9950 5900 2    39   Output ~ 0
+RXD0
+Text GLabel 9950 5800 2    39   Input ~ 0
+TXD0
+Text GLabel 9950 6200 2    39   Input ~ 0
+GPIO0
+$Comp
+L power:GND #PWR030
+U 1 1 60B6EFE9
+P 9950 6900
+F 0 "#PWR030" H 9950 6650 50  0001 C CNN
+F 1 "GND" H 9955 6727 50  0000 C CNN
+F 2 "" H 9950 6900 50  0001 C CNN
+F 3 "" H 9950 6900 50  0001 C CNN
+	1    9950 6900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR029
+U 1 1 60B6F944
+P 7500 5750
+F 0 "#PWR029" H 7500 5600 50  0001 C CNN
+F 1 "+3V3" H 7515 5923 50  0000 C CNN
+F 2 "" H 7500 5750 50  0001 C CNN
+F 3 "" H 7500 5750 50  0001 C CNN
+	1    7500 5750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L ESP8266:ESP-12E U?
+U 1 1 61514EB0
+P 8950 6100
+F 0 "U?" H 8950 6865 50  0000 C CNN
+F 1 "ESP-12E" H 8950 6774 50  0000 C CNN
+F 2 "ESP8266:ESP-12E_SMD" H 8950 6100 50  0001 C CNN
+F 3 "http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all/" H 8950 6100 50  0001 C CNN
+F 4 "ESP-12E" H 8950 6100 50  0001 C CNN "manf#"
+	1    8950 6100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9950 6500 9850 6500
+Wire Wire Line
+	9950 5900 9850 5900
+Wire Wire Line
+	9850 5800 9950 5800
+Wire Wire Line
+	9950 6200 9850 6200
+Wire Wire Line
+	9950 6000 9850 6000
+Wire Wire Line
+	9950 6100 9850 6100
+NoConn ~ 9200 7000
+NoConn ~ 8800 7000
+NoConn ~ 9100 7000
+NoConn ~ 8900 7000
+NoConn ~ 9000 7000
+NoConn ~ 8700 7000
+$Sheet
+S 4200 5500 850  500 
+U 60DD98A5
+F0 "USB -> Serial" 50
+F1 "serialport.sch" 50
+F2 "TXD" O R 5050 5600 39 
+F3 "RXD" I R 5050 5700 39 
+F4 "RESET_uC" O R 5050 5800 39 
+F5 "FLASH_uC" O R 5050 5900 39 
+F6 "VUSB" O L 4200 5600 39 
+$EndSheet
+Text GLabel 7850 5900 0    39   Input ~ 0
+TEMP
+Wire Wire Line
+	7850 5900 8050 5900
+Wire Notes Line
+	550  2950 550  3650
+Wire Notes Line
+	2350 2950 2350 3650
+$Comp
+L Device:R R?
+U 1 1 61652449
+P 10250 6000
+F 0 "R?" H 10320 6046 50  0000 L CNN
+F 1 "10k" H 10320 5955 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 10180 6000 50  0001 C CNN
+F 3 "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_11.pdf" H 10250 6000 50  0001 C CNN
+F 4 "RC1206FR-0710KL" H 10250 6000 50  0001 C CNN "manf#"
+	1    10250 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9850 6300 10250 6300
+$Comp
+L power:+3V3 #PWR?
+U 1 1 61656891
+P 10250 5750
+F 0 "#PWR?" H 10250 5600 50  0001 C CNN
+F 1 "+3V3" H 10265 5923 50  0000 C CNN
+F 2 "" H 10250 5750 50  0001 C CNN
+F 3 "" H 10250 5750 50  0001 C CNN
+	1    10250 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10250 5850 10250 5750
+Wire Wire Line
+	10250 6150 10250 6300
+$Comp
+L Device:R R?
+U 1 1 6166E9AD
+P 10250 6650
+F 0 "R?" H 10320 6696 50  0000 L CNN
+F 1 "10k" H 10320 6605 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 10180 6650 50  0001 C CNN
+F 3 "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_11.pdf" H 10250 6650 50  0001 C CNN
+F 4 "RC1206FR-0710KL" H 10250 6650 50  0001 C CNN "manf#"
+	1    10250 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6166F7A3
+P 10250 6900
+F 0 "#PWR?" H 10250 6650 50  0001 C CNN
+F 1 "GND" H 10255 6727 50  0000 C CNN
+F 2 "" H 10250 6900 50  0001 C CNN
+F 3 "" H 10250 6900 50  0001 C CNN
+	1    10250 6900
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	10250 6900 10250 6800
+Wire Wire Line
+	9950 6500 9950 6900
+Wire Wire Line
+	10250 6500 10250 6400
+Wire Wire Line
+	10250 6400 9850 6400
+Wire Wire Line
+	7850 5800 7950 5800
+Wire Wire Line
+	8050 6100 7950 6100
+Wire Wire Line
+	7950 6100 7950 5800
+Connection ~ 7950 5800
+Wire Wire Line
+	7950 5800 8050 5800
+Wire Wire Line
+	7500 5750 7500 6000
+Wire Wire Line
+	7500 6000 8050 6000
+Wire Wire Line
+	7500 6000 7500 6500
+Wire Wire Line
+	7500 6500 8050 6500
+Connection ~ 7500 6000
+Text GLabel 7850 6200 0    39   Output ~ 0
+RELAY_1
+Text GLabel 7850 6300 0    39   Output ~ 0
+RELAY_2
+Text GLabel 7850 6400 0    39   Output ~ 0
+RELAY_3
+Wire Wire Line
+	8050 6200 7850 6200
+Wire Wire Line
+	7850 6300 8050 6300
+Wire Wire Line
+	8050 6400 7850 6400
 $EndSCHEMATC
