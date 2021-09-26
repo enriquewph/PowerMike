@@ -807,10 +807,10 @@ F 3 "" H 7500 5750 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L ESP8266:ESP-12E U?
+L ESP8266:ESP-12E U2
 U 1 1 61514EB0
 P 8950 6100
-F 0 "U?" H 8950 6865 50  0000 C CNN
+F 0 "U2" H 8950 6865 50  0000 C CNN
 F 1 "ESP-12E" H 8950 6774 50  0000 C CNN
 F 2 "ESP8266:ESP-12E_SMD" H 8950 6100 50  0001 C CNN
 F 3 "http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all/" H 8950 6100 50  0001 C CNN
@@ -856,10 +856,10 @@ Wire Notes Line
 Wire Notes Line
 	2350 2950 2350 3650
 $Comp
-L Device:R R?
+L Device:R R15
 U 1 1 61652449
 P 10250 6000
-F 0 "R?" H 10320 6046 50  0000 L CNN
+F 0 "R15" H 10320 6046 50  0000 L CNN
 F 1 "10k" H 10320 5955 50  0000 L CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 10180 6000 50  0001 C CNN
 F 3 "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_11.pdf" H 10250 6000 50  0001 C CNN
@@ -870,10 +870,10 @@ $EndComp
 Wire Wire Line
 	9850 6300 10250 6300
 $Comp
-L power:+3V3 #PWR?
+L power:+3V3 #PWR05
 U 1 1 61656891
 P 10250 5750
-F 0 "#PWR?" H 10250 5600 50  0001 C CNN
+F 0 "#PWR05" H 10250 5600 50  0001 C CNN
 F 1 "+3V3" H 10265 5923 50  0000 C CNN
 F 2 "" H 10250 5750 50  0001 C CNN
 F 3 "" H 10250 5750 50  0001 C CNN
@@ -885,10 +885,10 @@ Wire Wire Line
 Wire Wire Line
 	10250 6150 10250 6300
 $Comp
-L Device:R R?
+L Device:R R20
 U 1 1 6166E9AD
 P 10250 6650
-F 0 "R?" H 10320 6696 50  0000 L CNN
+F 0 "R20" H 10320 6696 50  0000 L CNN
 F 1 "10k" H 10320 6605 50  0000 L CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 10180 6650 50  0001 C CNN
 F 3 "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_11.pdf" H 10250 6650 50  0001 C CNN
@@ -897,10 +897,10 @@ F 4 "RC1206FR-0710KL" H 10250 6650 50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR011
 U 1 1 6166F7A3
 P 10250 6900
-F 0 "#PWR?" H 10250 6650 50  0001 C CNN
+F 0 "#PWR011" H 10250 6650 50  0001 C CNN
 F 1 "GND" H 10255 6727 50  0000 C CNN
 F 2 "" H 10250 6900 50  0001 C CNN
 F 3 "" H 10250 6900 50  0001 C CNN
