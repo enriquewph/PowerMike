@@ -824,16 +824,16 @@ Wire Wire Line
 $Comp
 L Connector:Screw_Terminal_01x02 J2
 U 1 1 6182613C
-P 1000 1300
+P 1000 1400
 AR Path="/6182613C" Ref="J2"  Part="1" 
 AR Path="/60CF66AD/6182613C" Ref="J?"  Part="1" 
-F 0 "J2" H 1000 1400 50  0000 C CNN
-F 1 "Screw_Terminal_01x02" H 918 1426 50  0001 C CNN
-F 2 "libs:TerminalBlock_bornier-2_P5.08mm" H 1000 1300 50  0001 C CNN
-F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=796636&DocType=Customer+Drawing&DocLang=English" H 1000 1300 50  0001 C CNN
-F 4 "796636-2" H 1000 1300 50  0001 C CNN "manf#"
-	1    1000 1300
-	-1   0    0    -1  
+F 0 "J2" H 1000 1200 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 918 1526 50  0001 C CNN
+F 2 "libs:TerminalBlock_bornier-2_P5.08mm" H 1000 1400 50  0001 C CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=796636&DocType=Customer+Drawing&DocLang=English" H 1000 1400 50  0001 C CNN
+F 4 "796636-2" H 1000 1400 50  0001 C CNN "manf#"
+	1    1000 1400
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	5800 1500 5800 1350
