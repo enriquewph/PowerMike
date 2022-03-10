@@ -5,19 +5,31 @@
 #include <ESP8266WiFi.h>
 #include <ESP8266mDNS.h>
 #include <WiFiUdp.h>
-#include <secrets.h>
-
-const char* ssid = STASSID;
-const char* password = STAPSK;
 
 void ota_init() {
+    int cnt = 0;
+
     WiFi.mode(WIFI_STA);
-    WiFi.begin(ssid, password);
-    while (WiFi.waitForConnectResult() != WL_CONNECTED) {
-        Serial.println("Connection Failed! Rebooting...");
-        delay(5000);
-        ESP.restart();
+
+    while (WiFi.status() != WL_CONNECTED) {
+        delay(500);
+        Serial.print(".");
+        if (cnt++ >= 10) {
+            WiFi.beginSmartConfig();
+            while (1) {
+                delay(1000);
+                if (WiFi.smartConfigDone()) {
+                    Serial.println("SmartConfig Success");
+                    break;
+                }
+            }
+        }
     }
+
+    Serial.println("");
+    Serial.println("");
+
+    WiFi.printDiag(Serial);
 
     if (!MDNS.begin("powermike.local")) {
         Serial.println("Error iniciando mDNS");
