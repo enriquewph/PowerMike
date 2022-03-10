@@ -17,7 +17,7 @@ void Rms::addSample(int16_t d) {
         _index--;  // Prevenir un overflow.
 }
 float Rms::getRms() {
-    float mean;
+    float mean = 0;
     for (uint16_t i = 0; i < _index; i++)
         mean += dataPtr[i];
     mean /= _index + 1;
