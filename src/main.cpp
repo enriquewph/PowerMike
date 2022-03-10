@@ -1,7 +1,5 @@
-#include <Arduino.h>
 
-#include "adc.h"
-#include "rms.h"
+#include "include.h"
 
 /*
  ? Forma de la onda a medir           Mediciones de tension            Mediciones de corriente
@@ -38,6 +36,8 @@ void setup() {
     Serial.begin(115200);
     pinMode(2, OUTPUT);
 
+    ota_init();
+
     /* Inicializar el adc. Arrancamos midiendo tension. */
     pinMode(13, INPUT);
     Serial.printf("RDY: %u\n", (uint8_t)digitalRead(13));
@@ -72,6 +72,8 @@ void loop() {
         Serial.printf("%.5fW\n", consumoWh);
         consumoWh = 0.0f;
     }
+
+    ota_loop();
 }
 
 void printBits(uint16_t var) {
