@@ -1,0 +1,6 @@
+(fp_lib_table
+  (lib (name libs)(type KiCad)(uri ${KIPRJMOD}/lib/libs.pretty)(options "")(descr ""))
+  (lib (name ESP8266)(type KiCad)(uri ${KIPRJMOD}/lib/esp8266/ESP8266.pretty)(options "")(descr ""))
+  (lib (name ZMPT101B)(type KiCad)(uri ${KIPRJMOD}/lib/ZMPT101B)(options "")(descr ""))
+  (lib (name qrlink)(type KiCad)(uri ${KIPRJMOD}/lib/qrlink)(options "")(descr ""))
+)

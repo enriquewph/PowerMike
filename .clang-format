@@ -1,0 +1,16 @@
+BasedOnStyle: Google
+AlignAfterOpenBracket: DontAlign
+AlignTrailingComments: "true"
+AllowShortCaseLabelsOnASingleLine: "true"
+AllowShortFunctionsOnASingleLine: InlineOnly
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLambdasOnASingleLine: None
+AllowShortLoopsOnASingleLine: "false"
+AlwaysBreakBeforeMultilineStrings: "true"
+ColumnLimit: "0"
+IndentWidth: "4"
+Language: Cpp
+NamespaceIndentation: All
+SpaceBeforeParens: ControlStatements
+SpaceInEmptyParentheses: "false"
+TabWidth: "4"

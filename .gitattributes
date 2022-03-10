@@ -1,0 +1,10 @@
+*.npz binary
+*.png binary
+*.pdf binary
+*.sldprt binary
+*.sldasm binary
+*.step binary
+
+*.pro filter=kicad_project
+*.sch filter=kicad_sch
+
