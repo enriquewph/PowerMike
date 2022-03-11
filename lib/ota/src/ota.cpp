@@ -1,10 +1,4 @@
-#include "include.h"
-
-// Otros
-#include <ArduinoOTA.h>
-#include <ESP8266WiFi.h>
-#include <ESP8266mDNS.h>
-#include <WiFiUdp.h>
+#include "ota.h"
 
 void ota_init() {
     int cnt = 0;
